@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders - Corelia Cloud</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="#" alt="Lushly Soap Company" width="30" height="24"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/orders.html">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-lg-none" href="#">Sign Out</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-primary ms-auto d-none d-lg-block">Sign Out</button>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Order Search Start -->
+    <div class="container" id="order-container">
+        <div class="row mt-5">
+            <div class="col-3 border rounded-3">
+                <form>
+                    <div class="mb-3 mt-3">
+                        <label for="styleId" class="form-label">Order Number</label>
+                        <input type="text" class="form-control" id="styleId" name="styleId">
+                    </div>
+                    <div class="mb-3">
+                        <label for="sku" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="sku" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="date" name="date">
+                    </div>
+                    <button type="submit" class="btn btn-outline-primary mb-3">Search</button>
+                </form>
+            </div>
+            <div class="col-9" id="order-results">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row align-items-center text-center">
+                            <div class="col-2 text-start">
+                                Order Number
+                            </div>
+                            <div class="col-5 text-center">
+                                Email
+                            </div>
+                            <div class="col-3 text-center">
+                                Created
+                            </div>
+                            <div class="col-2 text-end">
+                                Total
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row align-items-center text-center">
+                            <div class="col-2 text-start">
+                                <a href="#">500000001</a>
+                            </div>
+                            <div class="col-5 text-center text-break">
+                                <a href="#">cspears@spearsdigitalsolutions.com</a>
+                            </div>
+                            <div class="col-3 text-center">
+                                04/01/2025 08:05:03 AM
+                            </div>
+                            <div class="col-2 text-end">
+                                $178.98
+                            </div>
+                        </div>
+                    </li>
+            </div>
+        </div>
+
+        <!-- Order Search End -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
