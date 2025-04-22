@@ -1,0 +1,22 @@
+{
+  "name": "corelia",
+  "version": "1.0.0",
+  "description": "Corelia Cloud - An agile Content Management System",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cspears-sds/corelia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cspears-sds/corelia/issues"
+  },
+  "homepage": "https://github.com/cspears-sds/corelia#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.5"
+  }
+}

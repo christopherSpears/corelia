@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Corelia Cloud</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="./css/main.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="#" alt="Lushly Soap Company" width="30" height="24"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./blocks.html">Blocks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages.html">Pages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./orders.html">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./customers.html">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-lg-none" href="./login.html">Sign Out</a>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-outline-primary ms-auto d-none d-lg-block">Sign Out</button>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Product Search Start -->
+    <div class="container" id="products-container">
+        <div class="d-flex align-items-start gap-3 mt-5">
+            <div class="col-3 border rounded-3">
+                <form id="products-search-form">
+                    <div class="mx-3 mt-2 mb-3">
+                        <label for="styleId" class="form-label">Style ID</label>
+                        <input type="text" class="form-control" id="styleId" name="styleId">
+                    </div>
+                    <div class="mx-3 my-3">
+                        <label for="sku" class="form-label">SKU</label>
+                        <input type="text" class="form-control" id="sku" name="sku">
+                    </div>
+                    <div class="d-flex justify-content-between mx-3 my-3">
+                        <button type="submit" class="btn btn-outline-primary">Search</button>
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                            data-bs-target="#newProductModal">+ Create</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-9" id="product-results">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row align-items-center text-center">
+                            <div class="col-2 text-start">
+                                <strong>Product Image</strong>
+                            </div>
+                            <div class="col-6">
+                                <strong>Product Name</strong>
+                            </div>
+                            <div class="col-2 text-center">
+                                <strong>Style ID</strong>
+                            </div>
+                            <div class="col-2 text-center">
+                                <strong>SKU</strong>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row align-items-center text-center">
+                            <div class="col-2 text-start">
+                                <a href="./style/99851248">
+                                    <img src="./images/product1.webp" class="img-fluid" style="max-height: 50px;">
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                Sunday Drive Lush Foaming Hand Soap
+                            </div>
+                            <div class="col-2 text-center">
+                                <a href="./style/99851248">99851248</a>
+                            </div>
+                            <div class="col-2 text-end">
+                                <a href="#">99851248-080-M</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row align-items-center text-center">
+                            <div class="col-2 text-start">
+                                <a href="./style/99851247">
+                                    <img src="./images/product2.webp" class="img-fluid" style="max-height: 50px;">
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                Leather and Salt Lush Foaming Hand Soap
+                            </div>
+                            <div class="col-2 text-center">
+                                <a href="./style/99851247">99851247</a>
+                            </div>
+                            <div class="col-2 text-end">
+                                <a href="#">99851247-070-M</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row align-items-center text-center">
+                            <div class="col-2 text-start">
+                                <a href="./style/99851246">
+                                    <img src="./images/product3.webp" class="img-fluid" style="max-height: 50px;">
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                Holiday Trance Lush Foaming Hand Soap
+                            </div>
+                            <div class="col-2 text-center">
+                                <a href="./style/99851246">99851246</a>
+                            </div>
+                            <div class="col-2 text-end">
+                                <a href="#">99851246-060-M</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row align-items-center text-center">
+                            <div class="col-2 text-start">
+                                <a href="./style/99851245">
+                                    <img src="./images/product1.webp" class="img-fluid" style="max-height: 50px;">
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                Weekend Lush Foaming Hand Soap
+                            </div>
+                            <div class="col-2 text-center">
+                                <a href="./style/99851245">99851245</a>
+                            </div>
+                            <div class="col-2 text-end">
+                                <a href="#">99851245-050-M</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row align-items-center text-center">
+                            <div class="col-2 text-start">
+                                <a href="./style/99851244">
+                                    <img src="./images/product2.webp" class="img-fluid" style="max-height: 50px;">
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                Vanilla Lush Foaming Hand Soap
+                            </div>
+                            <div class="col-2 text-center">
+                                <a href="./style/99851244">99851244</a>
+                            </div>
+                            <div class="col-2 text-end">
+                                <a href="#">99851244-040-M</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Product Search End -->
+
+        <!-- New Product Modal Start -->
+        <!--
+        <div class="modal fade" id="newProductModal" tabindex="-1" aria-labelledby="newProductLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="newProductLabel">Create New Product&nbsp;</h1><i class="bi bi-info-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="Create a new Style. Styles are parents to individual skus."></i>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="createProduct">
+                            <div class="mx-3 mt-2 mb-3">
+                                <label for="createProductName" class="form-label">Product Name* (required)</label>
+                                <input type="text" class="form-control" id="createProductName" name="createProductName" required>
+                            </div>
+                            <div class="mx-3 my-3">
+                                <label for="createProductImage" class="form-label">Product Image* (required)</label>
+                                <input type="file" class="form-control" id="createProductImage" required>
+                            </div>
+                            <div class="mx-3 my-3">
+                                <label for="priceInput" class="form-label">Price* (required)</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input type="number" id="priceInput" class="form-control" aria-label="Amount" step="0.01" min="0" required>
+                                </div>
+                            </div>
+                            <div class="mx-3 my-3">
+                                <label class="form-check-label" for="categoriesSelect">Categories</label>
+                                <div class="mt-2">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="categoryCheckbox1" value="urban">
+                                        <label class="form-check-label" for="inlineCheckbox1">Urban</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="categoryCheckbox2" value="dress">
+                                        <label class="form-check-label" for="inlineCheckbox2">Dress</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="categoryCheckbox3" value="casual">
+                                        <label class="form-check-label" for="inlineCheckbox3">Casual</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="categoryCheckbox4" value="canvas">
+                                        <label class="form-check-label" for="inlineCheckbox4">Canvas</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="categoryCheckbox5" value="skate">
+                                        <label class="form-check-label" for="inlineCheckbox5">Skate</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="categoryCheckbox6" value="boots">
+                                        <label class="form-check-label" for="inlineCheckbox6">Boots</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="categoryCheckbox7" value="slippers">
+                                        <label class="form-check-label" for="inlineCheckbox7">Slippers</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="categoryCheckbox8" value="highTops">
+                                        <label class="form-check-label" for="inlineCheckbox8">High Tops</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="categoryCheckbox9" value="lowTops">
+                                        <label class="form-check-label" for="inlineCheckbox9">Low Tops</label>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="form-check mx-3 my-3">
+                                <input class="form-check-input" type="checkbox" value="" id="followCreateCheckBox">
+                                <label class="form-check-label" for="followCreateCheckBox">Take me to the skus page after creation</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-outline-success" form="createProduct">Create</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        -->
+
+        <!-- New Product Modal End -->
+
+        <!-- Bootstrap 5 CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+            crossorigin="anonymous">
+        </script>
+
+        <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        </script>
+</body>
+
+</html>

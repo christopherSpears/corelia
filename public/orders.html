@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orders - Corelia Cloud</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="./css/main.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -23,13 +22,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="/index.html">Home</a>
+                        <a class="nav-link" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/products.html">Products</a>
+                        <a class="nav-link" href="./products.html">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/orders.html">Orders</a>
+                        <a class="nav-link" href="./blocks.html">Blocks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages.html">Pages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./orders.html">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./customers.html">Customers</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link d-lg-none" href="#">Sign Out</a>
@@ -42,23 +50,25 @@
     <!-- Navbar End -->
 
     <!-- Order Search Start -->
-    <div class="container" id="order-container">
-        <div class="row mt-5">
+    <div class="container" id="orders-container">
+        <div class="d-flex align-items-start gap-3 mt-5">
             <div class="col-3 border rounded-3">
-                <form>
-                    <div class="mb-3 mt-3">
+                <form id="orders-search-form">
+                    <div class="mx-3 mt-2 mb-3">
                         <label for="styleId" class="form-label">Order Number</label>
                         <input type="text" class="form-control" id="styleId" name="styleId">
                     </div>
-                    <div class="mb-3">
+                    <div class="mx-3 my-3">
                         <label for="sku" class="form-label">Email</label>
                         <input type="text" class="form-control" id="email" name="email">
                     </div>
-                    <div class="mb-3">
+                    <div class="mx-3 my-3">
                         <label for="sku" class="form-label">Date</label>
                         <input type="date" class="form-control" id="date" name="date">
                     </div>
-                    <button type="submit" class="btn btn-outline-primary mb-3">Search</button>
+                    <div class="d-flex justify-content-end mx-3 my-3">
+                        <button type="submit" class="btn btn-outline-primary">Search</button>
+                    </div>
                 </form>
             </div>
             <div class="col-9" id="order-results">
@@ -66,16 +76,16 @@
                     <li class="list-group-item">
                         <div class="row align-items-center text-center">
                             <div class="col-2 text-start">
-                                Order Number
+                                <strong>Order Number</strong>
                             </div>
                             <div class="col-5 text-center">
-                                Email
+                                <strong>Email</strong>
                             </div>
                             <div class="col-3 text-center">
-                                Created
+                                <strong>Created</strong>
                             </div>
                             <div class="col-2 text-end">
-                                Total
+                                <strong>Total</strong>
                             </div>
                         </div>
                     </li>
