@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account - Corelia Cloud</title>
+  <link href="./css/main.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./images/favicon-96x96.png" sizes="96x96"/>
+  <link rel="icon" type="image/svg+xml" href="./images/favicon.svg"/>
+  <link rel="shortcut icon" href="./images/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png"/>
+  <meta name="apple-mobile-web-app-title" content="Corelia" />
+  <link rel="manifest" href="./images/site.webmanifest"/>
+</head>
+
+<body>
+
+    <!-- Page Takeover and Spinner -->
+    <div id="loadingOverlay" class="d-flex justify-content-center align-items-center position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-none">
+        <div class="text-center">
+            <div class="spinner-border text-light" role="status"></div>
+            <p class="text-light mt-3">Processing, please wait...</p>
+        </div>
+    </div>
+
+        <!-- Page Takeover -->
+        <div id="pageTakeover" class="d-flex justify-content-center align-items-center position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-none">
+        </div>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="#" alt="Lushly Soap Company" width="30" height="24"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./blocks.html">Blocks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages.html">Pages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./orders.html">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./customers.html">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-lg-none" href="#">Sign Out</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-primary ms-auto d-none d-lg-block">Sign Out</button>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Create Account Form -->
+  <form class="container d-flex justify-content-center pt-5" id="createAccountForm">
+    <div class="w-100" style="max-width: 400px;">
+      <img src="./images/corelia_logo_500x150.svg" class="img-fluid mb-3">
+      <div class="border rounded-3 px-3 py-3">
+        <img src="./images/create_account_500x150.svg" class="img-fluid" style="max-height: 120px">
+
+        <label for="email" class="form-label">Email* (required)</label>
+        <input type="email" class="form-control mb-3" id="email" name="email" placeholder="Email" required>
+        <small id="emailFeedback" class="form-text text-muted d-block mb-3"></small>
+  
+        <label for="firstName" class="form-label">First name* (required)</label>
+        <input type="text" class="form-control mb-3" id="firstName" name="firstName" placeholder="First name" required>
+        <small id="firstNameFeedback" class="form-text text-muted d-block mb-3"></small>
+  
+        <label for="lastName" class="form-label">Last name* (required)</label>
+        <input type="lastName" class="form-control mb-3" id="lastName" name="lastName" placeholder="Last name" required>
+        <small id="lastNameFeedback" class="form-text text-muted d-block mb-3"></small>
+
+        <label for="roleSelector" class="form-label">Role</label>
+        <select class="form-select mb-3" aria-label="Role dropdown" id="roleSelector">
+          </select>
+  
+        <button type="button" class="btn btn-primary w-100" onclick="createUser();">Create Account</button>
+      </div>
+    </div>
+  </form>
+
+  <!-- Bootsrtap 5 Toast Message -->
+  <div class="toast-container position-fixed top-50 start-50 translate-middle" style="z-index: 100;">
+    <div id="successToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <img src="./images/favicon.ico" class="rounded me-2" alt="corelia logo">
+            <strong class="me-auto">User created</strong>
+            <small>Just now</small>
+            <button id="closeToastButton" type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            User successfully created. They will receive an email with a temporary password momentarily. The first time they log in, they will need to change their password.
+        </div>
+    </div>
+</div>
+
+
+  <!-- Bootstrap 5 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+
+<!-- Get all user roles for the dropdown -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        getAllUserRoles();
+    });
+ </script>
+
+<script src="/public/main.js"></script>
+</body>
+
+</html>

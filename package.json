@@ -1,8 +1,8 @@
 {
   "name": "corelia",
   "version": "1.0.0",
-  "description": "Corelia Cloud - An agile Content Management System",
-  "main": "main.js",
+  "description": "Corelia Cloud - An Agile Content Management System",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/cspears-sds/corelia#readme",
   "dependencies": {
-    "bootstrap": "^5.3.5"
+    "argon2": "^0.43.0",
+    "bootstrap": "^5.3.5",
+    "express": "^5.1.0",
+    "node": "^20.19.2",
+    "pg": "^8.16.0"
   }
 }
