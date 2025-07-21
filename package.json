@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cspears-sds/corelia.git"
+    "url": "git+https://github.com/christopherSpears/corelia.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cspears-sds/corelia/issues"
+    "url": "https://github.com/christopherSpears/corelia/issues"
   },
-  "homepage": "https://github.com/cspears-sds/corelia#readme",
+  "homepage": "https://github.com/christopherSpears/corelia#readme",
   "dependencies": {
     "argon2": "^0.43.0",
     "bootstrap": "^5.3.5",
